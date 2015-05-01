@@ -1,0 +1,9 @@
+<layout>
+
+    <regions>
+        <sidebar>
+            <reports rule="/reports" template="reports-sidebar.html.twig">FOOTER_CLASS</reports>
+        </sidebar>
+    </regions>
+
+</layout>

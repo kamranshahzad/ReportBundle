@@ -1,0 +1,53 @@
+<configuration>
+
+    <layout>
+
+        <inlineblocks>
+            <sidemenus template="sidemenus.html.twig">\Cogilent\FrontBundle\Helper\Blocks::sideMenu</sidemenus>
+            <notification-menu template="notifications-menu.html.twig">\Cogilent\FrontBundle\Helper\Blocks::notificationMenu</notification-menu>
+        </inlineblocks>
+
+        <regions>
+            <sidebar>
+                <footer template="footer.html.twig" rule="/reports" role="ROLE_ADMIN">\Cogilent\FrontBundle\Helper</footer>
+                <login template="login.html.twig">\Cogilent\FrontBundle\Helper</login>
+            </sidebar>
+        </regions>
+
+    </layout>
+
+    <reports>
+        <links>
+            <link order="1" template="user_reports.html.twig" role="ROLE_ADMIN" >Users</link>
+            <link order="2" template="organization_reports.html.twig" role="ROLE_ADMIN">Organizations</link>
+        </links>
+    </reports>
+
+    <help>
+        <links>
+            <link label="User Reports" file="user_reports.md" ></link>
+            <link label="Organization Reports" file="organization_reports.md" ></link>
+        </links>
+    </help>
+
+    <settings>
+        <links>
+            <link order="1" attach-form="reportSettingsForm">Reports</link>
+        </links>
+        <form id="reportSettingsForm">
+            <link key="2">Reports</link>
+            <fields>
+                <sort-order type="text" required="false" label="Sort Forms" ></sort-order>
+            </fields>
+        </form>
+    </settings>
+
+    <forms>
+        <all>
+            <vars>
+
+            </vars>
+        </all>
+    </forms>
+
+</configuration>

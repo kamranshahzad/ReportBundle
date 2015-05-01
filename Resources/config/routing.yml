@@ -1,0 +1,4 @@
+report_annotation:
+    resource: "@CogilentReportBundle/Controller"
+    type: annotation
+
